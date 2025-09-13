@@ -1,0 +1,120 @@
+import { Holiday, PlanTemplate } from "../types/Event";
+
+export const upcomingHolidays: Holiday[] = [
+  {
+    id: "memorial-day-2025",
+    name: "Memorial Day Weekend",
+    date: new Date("2025-05-26"),
+    isLongWeekend: true,
+    daysOff: 3,
+    description: "Three-day weekend to honor fallen military personnel",
+  },
+  {
+    id: "independence-day-2025",
+    name: "Independence Day Weekend",
+    date: new Date("2025-07-04"),
+    isLongWeekend: true,
+    daysOff: 3,
+    description:
+      "Celebrate America's independence with fireworks and festivities",
+  },
+  {
+    id: "labor-day-2025",
+    name: "Labor Day Weekend",
+    date: new Date("2025-09-01"),
+    isLongWeekend: true,
+    daysOff: 3,
+    description: "End of summer celebration with family and friends",
+  },
+  {
+    id: "thanksgiving-2025",
+    name: "Thanksgiving Weekend",
+    date: new Date("2025-11-27"),
+    isLongWeekend: true,
+    daysOff: 4,
+    description: "Four-day weekend for gratitude and family gatherings",
+  },
+  {
+    id: "christmas-2025",
+    name: "Christmas Weekend",
+    date: new Date("2025-12-25"),
+    isLongWeekend: true,
+    daysOff: 3,
+    description: "Holiday celebration with loved ones",
+  },
+];
+
+export const planTemplates: PlanTemplate[] = [
+  {
+    id: "lazy-weekend",
+    name: "Lazy Weekend",
+    theme: "lazy",
+    description: "Relax, recharge, and take it slow",
+    suggestedActivities: ["spa", "reading", "movies", "brunch", "meditation"],
+    icon: "😴",
+  },
+  {
+    id: "adventurous-weekend",
+    name: "Adventurous Weekend",
+    theme: "adventurous",
+    description: "Seek thrills and explore new experiences",
+    suggestedActivities: [
+      "hiking",
+      "rock climbing",
+      "kayaking",
+      "zip lining",
+      "adventure sports",
+    ],
+    icon: "🏔️",
+  },
+  {
+    id: "family-weekend",
+    name: "Family Weekend",
+    theme: "family",
+    description: "Quality time with loved ones",
+    suggestedActivities: ["zoo", "park", "family games", "picnic", "museum"],
+    icon: "👨‍👩‍👧‍👦",
+  },
+  {
+    id: "romantic-weekend",
+    name: "Romantic Weekend",
+    theme: "romantic",
+    description: "Intimate moments with your special someone",
+    suggestedActivities: [
+      "dinner",
+      "wine tasting",
+      "sunset walk",
+      "couples spa",
+      "dancing",
+    ],
+    icon: "💕",
+  },
+  {
+    id: "cultural-weekend",
+    name: "Cultural Weekend",
+    theme: "cultural",
+    description: "Immerse yourself in arts and culture",
+    suggestedActivities: [
+      "museums",
+      "galleries",
+      "theater",
+      "concerts",
+      "cultural festivals",
+    ],
+    icon: "🎭",
+  },
+  {
+    id: "active-weekend",
+    name: "Active Weekend",
+    theme: "active",
+    description: "Stay fit and energized",
+    suggestedActivities: [
+      "cycling",
+      "running",
+      "yoga",
+      "sports",
+      "fitness classes",
+    ],
+    icon: "🏃‍♂️",
+  },
+];

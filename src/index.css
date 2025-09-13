@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS Variables for consistent theming */
+:root {
+  --PlanMyWeekend-primary: #9929EA;
+  --PlanMyWeekend-secondary: #CC66DA;
+  --PlanMyWeekend-background: #000000;
+  --PlanMyWeekend-highlight: #FAEB92;
+  --PlanMyWeekend-primary-light: #A855F7;
+  --PlanMyWeekend-secondary-light: #D1A7E1;
+  
+  /* Spacing system (8px base) */
+  --space-xs: 0.5rem;   /* 8px */
+  --space-sm: 1rem;     /* 16px */
+  --space-md: 1.5rem;   /* 24px */
+  --space-lg: 2rem;     /* 32px */
+  --space-xl: 3rem;     /* 48px */
+  --space-2xl: 4rem;    /* 64px */
+  
+  /* Animation durations - change these to adjust timing */
+  --duration-micro: 180ms;
+  --duration-splash: 900ms;
+  --duration-transition: 700ms;
+}
+
+/* Reduced motion preferences - disable animations for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  /* Ensure drag and drop still works with reduced motion */
+  [data-dnd-kit-draggable] {
+    transition: none !important;
+  }
+}
+
+/* Base styles */
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  background-color: var(--PlanMyWeekend-background);
+  color: white;
+}
+
+/* Custom focus states for accessibility */
+.focus-ring:focus-visible {
+  outline: 2px solid var(--PlanMyWeekend-highlight);
+  outline-offset: 2px;
+}
+
+/* Gradient utilities */
+.gradient-primary {
+  background: linear-gradient(135deg, var(--PlanMyWeekend-primary) 0%, var(--PlanMyWeekend-secondary) 100%);
+}
+
+.gradient-hero {
+  background: linear-gradient(180deg, var(--PlanMyWeekend-background) 0%, var(--PlanMyWeekend-primary) 100%);
+}
+
+/* Screen reader only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Touch-friendly drag and drop */
+.touch-manipulation {
+  touch-action: manipulation;
+}
+
+/* Improved line clamping */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
